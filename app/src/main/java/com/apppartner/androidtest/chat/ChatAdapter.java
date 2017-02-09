@@ -15,6 +15,9 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 /**
  * A recycler view adapter used to display chat log messages in {@link ChatActivity}.
  * <p/>
@@ -87,14 +90,13 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatViewHolder
 
     public static class ChatViewHolder extends RecyclerView.ViewHolder
     {
-        ImageView avatarImageView;
-        TextView messageTextView;
+        @BindView(R.id.avatarImageView) ImageView avatarImageView;
+        @BindView(R.id.messageTextView) TextView messageTextView;
 
         public ChatViewHolder(View view)
         {
             super(view);
-            avatarImageView = (ImageView)view.findViewById(R.id.avatarImageView);
-            messageTextView = (TextView)view.findViewById(R.id.messageTextView);
+            ButterKnife.bind(this, view);
         }
     }
 

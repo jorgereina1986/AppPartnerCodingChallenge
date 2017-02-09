@@ -15,6 +15,8 @@ import android.widget.RelativeLayout;
 import com.apppartner.androidtest.MainActivity;
 import com.apppartner.androidtest.R;
 
+import butterknife.BindView;
+
 /**
  * Screen that displays the AppPartner icon.
  * The icon can be moved around on the screen as well as animated.
@@ -28,10 +30,9 @@ public class AnimationActivity extends AppCompatActivity {
     // Class Properties
     //==============================================================================================
 
-    private Button animationBtn;
-    private ImageView logoIv;
-    private ViewGroup rootLayout;
-    private android.widget.RelativeLayout.LayoutParams layoutParams;
+    @BindView(R.id.anim_btn) Button animationBtn;
+    @BindView(R.id.logo_iv) ImageView logoIv;
+    @BindView(R.id.root_layout) ViewGroup rootLayout;
     private int _xDelta;
     private int _yDelta;
     //==============================================================================================

@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -41,13 +40,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class LoginActivity extends AppCompatActivity {
     private static final String BASE_URL = "http://dev3.apppartner.com/";
 
-    @Nullable
-    @BindView(R.id.username_et)
-    EditText usernameEt;
-    @BindView(R.id.password_et)
-    EditText passwordEt;
-    @BindView(R.id.login_btn)
-    Button loginBtn;
+    @BindView(R.id.username_et) EditText usernameEt;
+    @BindView(R.id.password_et) EditText passwordEt;
+    @BindView(R.id.login_btn) Button loginBtn;
     private Context context;
 
     //==============================================================================================
