@@ -69,16 +69,12 @@ public class AnimationActivity extends AppCompatActivity {
 
         // TODO: Make the UI look like it does in the mock-up. Allow for horizontal screen rotation.
 
-        // TODO: When the fade button is clicked, you must animate the AppPartner Icon.
-        // TODO: It should fade from 100% alpha to 0% alpha, and then from 0% alpha to 100% alpha
         animationBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 toggleAnimation();
             }
         });
-
-        // TODO: The user should be able to touch and drag the AppPartner Icon around the screen.
 
         logoIv.setOnTouchListener(new ChoiceTouchListener());
 
